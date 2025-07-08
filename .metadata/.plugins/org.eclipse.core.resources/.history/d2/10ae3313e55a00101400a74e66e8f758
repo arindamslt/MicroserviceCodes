@@ -1,0 +1,5 @@
+package com.arindam.dto;
+
+public class ProductDto {
+
+}

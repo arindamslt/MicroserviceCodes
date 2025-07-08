@@ -1,0 +1,35 @@
+server:
+  port: 8082
+spring:
+  config:
+    import: optional:configserver:http://localhost:8888
+  application:
+    name: order-service
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+
+        
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+resilience4j:
+  circuitbreaker:
+    instances:
+      product-service:
+        registerHealthIndicator: true
+        slidingWindowSize: 5
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+        permittedNumberOfCallsInHalfOpenState: 2
+        minimumNumberOfCalls: 5
+        automaticTransitionFromOpenToHalfOpenEnabled: true
+feign:
+  client:
+    config:
+      default:
+        connectTimeout: 3000
+        readTimeout: 3000

@@ -1,0 +1,5 @@
+package com.arindam.fallback;
+
+public class ProductFallBack {
+
+}

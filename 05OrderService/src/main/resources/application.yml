@@ -1,0 +1,35 @@
+server:
+  port: 8082
+spring:
+  config:
+    import: optional:configserver:http://localhost:8888
+  application:
+    name: order-service
+  boot:
+    admin:
+      client:
+        url: http://localhost:1111/
+  cloud:
+    openfeign:
+      circuitbreaker:
+        enabled: true
+
+        
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
+resilience4j:
+  circuitbreaker:
+    instances:
+      productClient:
+        slidingWindowSize: 5
+        minimumNumberOfCalls: 3
+        failureRateThreshold: 50
+        waitDurationInOpenState: 10s
+  retry:
+    instances:
+      productClient:
+        maxAttempts: 2
+        waitDuration: 1s

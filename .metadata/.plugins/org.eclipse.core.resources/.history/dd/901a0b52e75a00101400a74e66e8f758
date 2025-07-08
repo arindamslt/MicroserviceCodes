@@ -1,0 +1,5 @@
+package com.arindam.client;
+
+public interface ProductClient {
+
+}
