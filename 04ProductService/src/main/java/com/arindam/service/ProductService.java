@@ -3,6 +3,8 @@ package com.arindam.service;
 import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 
 import com.arindam.model.Product;
@@ -19,5 +21,17 @@ private ProductRepo prepo;
 	public List<Product> getData()
 	{
 		return prepo.findAll();
+	}
+	@Cacheable(value="prd",key="#id")
+	public Product getProductId(Long id)
+	{
+		System.out.println("FETCHING DATA FROM DB:"+id);
+		return prepo.findById(id).orElse(null);
+	}
+	@CacheEvict(value="prd",key="#id")
+	public void deleteProduct(Long id)
+	{
+		Product p=prepo.findById(id).orElse(null);
+		prepo.delete(p);
 	}
 }

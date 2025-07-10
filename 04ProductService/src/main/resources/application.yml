@@ -9,6 +9,12 @@ spring:
     admin:
       client:
         url: http://localhost:1111/
+  cache:
+    type: redis
+  data:
+    redis:
+      host: localhost
+      port: 6379
 
         
 management:
