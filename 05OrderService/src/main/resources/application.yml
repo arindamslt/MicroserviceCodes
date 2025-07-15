@@ -13,6 +13,10 @@ spring:
     openfeign:
       circuitbreaker:
         enabled: true
+  kafka:
+    bootstrap-servers: localhost:9092
+    template:
+      default-topic: order-topic
 
         
 management:

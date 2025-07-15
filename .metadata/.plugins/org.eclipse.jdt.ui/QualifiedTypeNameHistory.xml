@@ -18,7 +18,6 @@
     <fullyQualifiedTypeName name="jakarta.persistence.Temporal"/>
     <fullyQualifiedTypeName name="jakarta.persistence.TemporalType"/>
     <fullyQualifiedTypeName name="jakarta.persistence.Table"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="com.arindam.repository.OrderRepo"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.openfeign.FeignClient"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RestController"/>
@@ -28,7 +27,6 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.RequestBody"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
     <fullyQualifiedTypeName name="com.arindam.model.Order"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.cloud.openfeign.EnableFeignClients"/>
     <fullyQualifiedTypeName name="jakarta.persistence.GeneratedValue"/>
     <fullyQualifiedTypeName name="jakarta.persistence.GenerationType"/>
@@ -49,12 +47,15 @@
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PutMapping"/>
     <fullyQualifiedTypeName name="org.springframework.cache.annotation.EnableCaching"/>
     <fullyQualifiedTypeName name="org.springframework.cache.annotation.Cacheable"/>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
-    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
     <fullyQualifiedTypeName name="org.springframework.data.redis.cache.RedisCacheManager"/>
     <fullyQualifiedTypeName name="org.springframework.data.redis.connection.RedisConnectionFactory"/>
     <fullyQualifiedTypeName name="org.springframework.data.redis.serializer.RedisSerializationContext"/>
     <fullyQualifiedTypeName name="org.springframework.data.redis.serializer.GenericJackson2JsonRedisSerializer"/>
     <fullyQualifiedTypeName name="org.springframework.data.redis.cache.RedisCacheConfiguration"/>
     <fullyQualifiedTypeName name="org.springframework.cache.annotation.CacheEvict"/>
+    <fullyQualifiedTypeName name="org.springframework.kafka.core.KafkaTemplate"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Configuration"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
 </qualifiedTypeNameHistroy>
